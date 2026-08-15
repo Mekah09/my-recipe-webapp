@@ -1,8 +1,14 @@
+import Navbar from "../components/Navbar"
 
 
 const Wishlist = () => {
+
+
   return (
-    <div>Wishlist</div>
+    <>
+    <Navbar/>
+    <div>No wishlist added yet</div>
+    </>
   )
 }
 
