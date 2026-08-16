@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
+import { FiHeart } from 'react-icons/fi';
 // import SearchMenu from "../components/SearchMenu";
 
 const Recipes = () => {
@@ -17,9 +18,9 @@ const Recipes = () => {
       <Navbar />
       <div>
         <div>
-          <div className="shadow-md p-5 text-slate-800 text-center m-5 ">
-            <h1 className="text-5xl font-semibold m-5">Recipe Directory</h1>
-            <p>Search our collection of different Cuisine of food based on event, cost, time of preperation we get you covered always</p>
+          <div className="shadow-md p-5 text-center m-5 ">
+            <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl mt-5">Recipe Directory</h1>
+            <p className="mt-6 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Search our collection of different Cuisine of food based on event, cost, time of preperation we get you covered always</p>
           </div>
           <div>
             {/* <SearchMenu/> */}
@@ -36,6 +37,9 @@ const Recipes = () => {
                     alt={items.name}
                     className="max-h-full object-contain rounded-2xl transition hover:scale-105"
                   />
+                  <span className="abosolute -top-1 -right">
+                      <FiHeart className="text-sm hover:bg-red-500" />
+                  </span>
                 </div>
 
 

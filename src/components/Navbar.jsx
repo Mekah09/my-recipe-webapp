@@ -19,7 +19,7 @@ const Navbar = () => {
             {/* 1. Logo Section */}
             <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
               <FaFeatherAlt className="text-indigo-600 text-3xl" />
-              <span className="font-bold text-xl text-gray-900 tracking-wide">Brand</span>
+              <span className="font-bold text-xl text-pretty text-gray-900 tracking-wide">Haykay</span>
             </div>
 
             {/* 2. Desktop Navigation Links */}
@@ -39,22 +39,20 @@ const Navbar = () => {
                   fontWeight: isActive ? "bold" : "normal"
                 })}
               >
-                Recipes
+                All Recipes
               </NavLink>
-              <NavLink to={"/RecipesDetails"}
+              <NavLink to={"/Wishlist"}
                 style={({ isActive }) => ({
                   color: isActive ? "black" : "gray",
                   fontWeight: isActive ? "bold" : "normal"
                 })}
               >
-                Recipes details
+                Saved
               </NavLink>
             </div>
 
-            {/* 3 & 4. Right Side: Search, Wishlist, and Hamburger */}
             <div className="flex items-center space-x-3 sm:space-x-6">
 
-              {/* Search Bar (Always visible on mobile and desktop) */}
               <div className="relative group">
                 <input
                   type="text"
@@ -67,11 +65,11 @@ const Navbar = () => {
               </div>
 
               {/* Wishlist Button (Beside the hamburger on mobile) */}
-              <button className="text-gray-600 hover:text-red-500 transition-colors relative flex items-center justify-center p-1">
+              <button className="md:hidden text-gray-600 hover:text-red-500 transition-colors relative flex items-center justify-center p-1">
                 <FiHeart className="text-xl sm:text-2xl" />
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">
+                {/* <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">
                   0
-                </span>
+                </span> */}
               </button>
 
               {/* Mobile Menu Toggle Button (Hamburger) */}
@@ -111,13 +109,13 @@ const Navbar = () => {
               >
                 Recipes
               </NavLink>
-              <NavLink to={"/RecipesDetails"}
+              <NavLink to={"/Wishlist"}
                 style={({ isActive }) => ({
                   color: isActive ? "black" : "gray",
                   fontWeight: isActive ? "bold" : "normal"
                 })}
               >
-                Recipes details
+                Saved Recipes
               </NavLink>
             </div>
           </div>
