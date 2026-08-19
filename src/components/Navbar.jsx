@@ -12,21 +12,21 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white shadow-md w-full sticky top-0 z-50">
+      <nav className=" bg-charcoal text-milk shadow-md w-full sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
 
             {/* 1. Logo Section */}
             <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
               <FaFeatherAlt className="text-indigo-600 text-3xl" />
-              <span className="font-bold text-xl text-pretty text-gray-900 tracking-wide">Haykay</span>
+              <span className="font-bold text-xl text-pretty text-milk tracking-wide">Haykay</span>
             </div>
 
             {/* 2. Desktop Navigation Links */}
             <div className="hidden md:flex space-x-8 items-center">
               <NavLink to={"/"}
                 style={({ isActive }) => ({
-                  color: isActive ? "black" : "gray",
+                  color: isActive ? "#A39382" : "#FBF7F4",
                   fontWeight: isActive ? "bold" : "normal"
                 })}
               >
@@ -35,7 +35,7 @@ const Navbar = () => {
 
               <NavLink to={"/Recipes"}
                 style={({ isActive }) => ({
-                  color: isActive ? "black" : "gray",
+                  color: isActive ? "#A39382" : "#FBF7F4",
                   fontWeight: isActive ? "bold" : "normal"
                 })}
               >
@@ -43,7 +43,7 @@ const Navbar = () => {
               </NavLink>
               <NavLink to={"/Wishlist"}
                 style={({ isActive }) => ({
-                  color: isActive ? "black" : "gray",
+                  color: isActive ? "#A39382" : "#FBF7F4",
                   fontWeight: isActive ? "bold" : "normal"
                 })}
               >

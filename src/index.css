@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-milk: #FBF7F4;
+  --color-oat: #E5DED2;
+  --color-taupe: #A39382;
+  --color-mocha: #685D54;
+  --color-charcoal: #232323;
+}

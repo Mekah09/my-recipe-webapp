@@ -22,10 +22,13 @@ const Wishlist = () => {
   }
 
   return (
-    <>
+    <div className="min-h-screen bg-milk text-charcoal">
       <Navbar />
       <div>
-        <h1>Saved Recipes</h1>
+        <div className="shadow-md p-5 text-center m-5 ">
+          <h1 className="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl mt-5">Saved Recipe Directory</h1>
+          <p className="mt-6 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Here are you saved recipes</p>
+        </div>
 
         {wishlist.length === 0 ? (
           <p>No Recipes saved</p>
@@ -33,7 +36,7 @@ const Wishlist = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 m-4">
             {wishlist.map((recipe) => (
               <Link to={`/RecipesDetails/${recipe.id}`}>
-                <div key={recipe.id} className="overflow-hidden rounded-2xl bg-white shadow-md text-slate-800 p-3.5 flex flex-col justify-between cursor-pointer transition hover:scale-105 hover:shadow-lg">
+                <div key={recipe.id} className="overflow-hidden rounded-2xl border shadow-md text-slate-800 p-3.5 flex flex-col justify-between cursor-pointer transition hover:scale-105 hover:shadow-lg">
 
                   <div className="relative aspect-4/3 rounded-xl overflow-hidden mb-3 ">
                     <img
@@ -45,7 +48,7 @@ const Wishlist = () => {
                       {recipe.cuisine}
                     </span>
                     <button onClick={() => removeFromWishlist(recipe.id)} className="absolute top-2.5 right-2.5 w-7 h-7 rounded-full flex items-center justify-center backdrop-blur-md transition-colors bg-black/60 text-gray-300 hover:text-white border border-white/15">
-                      <FiHeart />
+                      <FiHeart className="text-red-500" />
                     </button>
                     <div className="absolute bottom-2.5 left-2.5 bg-black/75 backdrop-blur-md text-white text-[10px] font-semibold px-2 py-0.5 rounded-md flex items-center gap-1 border border-white/10">
                       <svg className="w-2.5 h-2.5 text-[#f4a261]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -87,7 +90,7 @@ const Wishlist = () => {
           </div>
         )}
       </div>
-    </>
+    </ div>
   )
 }
 
