@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar"
 import { useState, useEffect } from "react"
+import NavbarSeaMenu from "../components/NavbarSeaMenu";
 
 const Home = () => {
 
@@ -18,7 +19,6 @@ const Home = () => {
   return (
     <div className="min-h-screen w-full bg-milk text-charcoal">
       <Navbar />
-
       <section className="relative py-12 lg:py-18 overflow-hidden bg-oat">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">

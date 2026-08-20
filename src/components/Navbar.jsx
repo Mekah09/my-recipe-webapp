@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FaBars, FaTimes, FaSearch, FaFeatherAlt } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
+import NavbarSeaMenu from './NavbarSeaMenu';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,8 +58,8 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center gap-3 sm:gap-5">
-
-              <div className="relative group">
+                <NavbarSeaMenu/>
+              {/* <div className="relative group">
                 <input
                   type="text"
                   placeholder="Search..."
@@ -67,7 +68,7 @@ const Navbar = () => {
                 <button className="absolute right-2 top-1/2 -translate-y-1/2 text-taupe transition-colors hover:text-oat sm:right-3">
                   <FaSearch className="text-sm" />
                 </button>
-              </div>
+              </div> */}
 
               {/* Wishlist Button (Beside the hamburger on mobile) */}
               <button className="relative flex items-center justify-center p-1 text-taupe transition-colors hover:text-oat md:hidden">
