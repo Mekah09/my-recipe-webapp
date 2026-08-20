@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 // import { FiHeart } from 'react-icons/fi';
-// import SearchMenu from "../components/SearchMenu";
+import SearchMenu from "../components/SearchMenu";
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -58,7 +58,7 @@ const Recipes = () => {
             <p className="mt-5 max-w-2xl text-base leading-7 text-mocha">Browse a considered collection of cuisines, comfort food, and everyday favorites. Clear ingredients, useful timing, no ceremony.</p>
           </div>
           <div>
-            {/* <SearchMenu/> */}
+            <SearchMenu/>
           </div>
         </div>
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 px-5 py-10 sm:grid-cols-2 sm:px-8 lg:grid-cols-3 xl:grid-cols-4">

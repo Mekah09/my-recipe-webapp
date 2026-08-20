@@ -96,7 +96,7 @@ const SearchMenu = () => {
             <FaTimes />
           </button>
         )}
-      </div>2
+      </div>
 
       {/* Dropdown Results */}
       {isOpen && (
