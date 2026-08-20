@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar"
 import { useState, useEffect } from "react"
+import Footer from "../components/Footer";
 
 
 const Home = () => {
@@ -183,7 +184,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
 
 
     </div>
