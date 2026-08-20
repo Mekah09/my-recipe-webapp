@@ -77,7 +77,7 @@ const SearchMenu = () => {
     <div ref={searchRef} className="relative w-full max-w-md">
       {/* Search Input */}
       <div className="relative">
-        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-taupe">
           <FaSearch />
         </div>
         <input
@@ -86,12 +86,12 @@ const SearchMenu = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onFocus={() => searchQuery && setIsOpen(true)}
-          className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+          className="w-full rounded-lg border border-oat bg-milk py-2 pl-10 pr-10 text-sm text-charcoal placeholder:text-taupe focus:border-mocha focus:outline-none focus:ring-2 focus:ring-oat"
         />
         {searchQuery && (
           <button
             onClick={handleClear}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-taupe transition hover:text-charcoal"
           >
             <FaTimes />
           </button>
@@ -100,16 +100,16 @@ const SearchMenu = () => {
 
       {/* Dropdown Results */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+        <div className="absolute left-0 right-0 top-full z-50 mt-2 max-h-96 overflow-y-auto rounded-lg border border-oat bg-milk shadow-xl">
           {isLoading ? (
-            <div className="p-4 text-center text-gray-500">Loading...</div>
+            <div className="p-4 text-center text-sm text-mocha">Loading...</div>
           ) : filteredRecipes.length > 0 ? (
             <div>
               {filteredRecipes.map((recipe) => (
                 <div
                   key={recipe.id}
                   onClick={() => handleRecipeClick(recipe.id)}
-                  className="p-3 hover:bg-gray-100 cursor-pointer border-b border-gray-200 last:border-b-0 transition"
+                  className="cursor-pointer border-b border-oat p-3 transition last:border-b-0 hover:bg-oat/50"
                 >
                   <div className="flex items-center gap-3">
                     <img
@@ -118,17 +118,17 @@ const SearchMenu = () => {
                       className="w-12 h-12 rounded object-cover"
                     />
                     <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 truncate">
+                      <h4 className="truncate font-semibold text-charcoal">
                         {recipe.name}
                       </h4>
-                      <p className="text-sm text-gray-600">{recipe.cuisine}</p>
+                      <p className="text-sm text-mocha">{recipe.cuisine}</p>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           ) : searchQuery ? (
-            <div className="p-4 text-center text-gray-500">
+            <div className="p-4 text-center text-sm text-mocha">
               No recipes found for "{searchQuery}"
             </div>
           ) : null}
