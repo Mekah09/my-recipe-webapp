@@ -17,6 +17,7 @@ const Wishlist = () => {
       (recipe) => recipe.id !== id
     )
 
+    alert("Recipe removed from your wishlist");
     localStorage.setItem("wishlist", JSON.stringify(updatedWishlist))
     setWishlist(updatedWishlist)
   }

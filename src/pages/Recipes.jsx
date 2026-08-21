@@ -27,6 +27,7 @@ const Recipes = () => {
     const alreadyExists = savedWishlist.some(
       (item) => item.id === recipe.id
     )
+    alert(alreadyExists ? "Recipe removed from your wishlist" : "Recipe added to your wishlist");
     if (alreadyExists) {
       const updateWishlist = savedWishlist.filter(
         (item) => item.id !== recipe.id
