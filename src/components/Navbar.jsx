@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaBars, FaTimes, FaSearch, FaFeatherAlt } from 'react-icons/fa';
+import { FaBars, FaTimes, FaFeatherAlt } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import NavbarSeaMenu from './NavbarSeaMenu';
@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 w-full border-b border-mocha/30 bg-charcoal text-milk shadow-lg shadow-charcoal/10">
+      <nav data-aos="fade-down" data-aos-duration="500" className="sticky top-0 z-50 w-full border-b border-mocha/30 bg-charcoal text-milk shadow-lg shadow-charcoal/10">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="flex h-[4.5rem] items-center justify-between gap-5">
 
@@ -58,7 +58,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center gap-3 sm:gap-5">
-                <NavbarSeaMenu/>
+              <NavbarSeaMenu />
               {/* <div className="relative group">
                 <input
                   type="text"

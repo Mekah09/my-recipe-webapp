@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-mocha/30 bg-charcoal text-milk">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-[1.5fr_1fr_1fr]">
-        <div className="max-w-sm space-y-4">
+        <div data-aos="fade-up" className="max-w-sm space-y-4">
           <Link to="/" className="inline-flex items-center gap-3 text-lg font-semibold tracking-[0.18em] transition-colors hover:text-oat">
             <span className="flex h-9 w-9 items-center justify-center rounded-full border border-taupe/60 text-oat">
               <FaFeatherAlt className="text-base" />
@@ -17,7 +17,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div>
+        <div data-aos="fade-up" data-aos-delay="100">
           <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-oat">Explore</h2>
           <nav className="mt-4 flex flex-col items-start gap-3 text-sm text-taupe" aria-label="Footer navigation">
             <Link to="/" className="transition-colors hover:text-milk">Home</Link>
@@ -26,7 +26,7 @@ const Footer = () => {
           </nav>
         </div>
 
-        <div>
+        <div data-aos="fade-up" data-aos-delay="200">
           <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-oat">Haykay kitchen</h2>
           <p className="mt-4 max-w-xs text-sm leading-6 text-taupe">
             Make something worth sharing, one straightforward step at a time.
