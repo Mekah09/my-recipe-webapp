@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FaBars, FaTimes, FaFeatherAlt } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import NavbarSeaMenu from './NavbarSeaMenu';
 
 const Navbar = () => {
@@ -19,9 +19,9 @@ const Navbar = () => {
 
             {/* 1. Logo Section */}
             <div className="flex shrink-0 cursor-pointer items-center gap-3">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-taupe/60 text-oat">
+              <Link to="/" className="flex h-9 w-9 items-center justify-center rounded-full border border-taupe/60 text-oat">
                 <FaFeatherAlt className="text-base" />
-              </span>
+              </ Link>
               <span className="hidden text-xl font-semibold tracking-[0.18em] text-milk sm:inline">Haykay</span>
             </div>
 
@@ -71,12 +71,14 @@ const Navbar = () => {
               </div> */}
 
               {/* Wishlist Button (Beside the hamburger on mobile) */}
-              <button className="relative flex items-center justify-center p-1 text-taupe transition-colors hover:text-oat md:hidden">
-                <FiHeart className="text-xl sm:text-2xl" />
-                {/* <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">
+              <Link to={"/Wishlist"}>
+                <button className="relative flex items-center justify-center p-1 text-taupe transition-colors hover:text-oat md:hidden">
+                  <FiHeart className="text-xl sm:text-2xl" />
+                  {/* <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">
                   0
                 </span> */}
-              </button>
+                </button>
+              </Link>
 
               {/* Mobile Menu Toggle Button (Hamburger) */}
               <button

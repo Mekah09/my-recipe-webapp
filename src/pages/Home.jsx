@@ -52,7 +52,7 @@ const Home = () => {
                 </ Link>
               </div>
               <div className="pt-6 border-t border-white/10">
-                <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block mb-2.5">
+                {/* <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block mb-2.5">
                   Featured This Week
                 </span>
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
@@ -68,7 +68,7 @@ const Home = () => {
                   <button className="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-[#141721] border border-white/10 text-gray-400 hover:text-white">
                     Creamy
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
             <div data-aos="fade-left" data-aos-delay="150" className="lg:col-span-6 flex justify-center">
@@ -91,17 +91,19 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                <div className="space-y-1.5">
-                  <span className="text-[10px] font-semibold text-taupe uppercase tracking-wider">
-                    Weeknight Dinner
-                  </span>
-                  <h3 className="break-words font-display text-lg font-bold text-charcoal sm:text-xl">
-                    {findRecipesDetails?.name}
-                  </h3>
-                  <p className="text-xs text-mocha line-clamp-2 leading-relaxed">
-                    Crispy thin crust with fresh San Marzano tomato sauce, torn mozzarella, and fragrant fresh basil leaves.
-                  </p>
-                </div>
+                <Link to={`/RecipesDetails/${findRecipesDetails?.id}`} className="block">
+                  <div className="space-y-1.5">
+                    <span className="text-[10px] font-semibold text-taupe uppercase tracking-wider">
+                      Weeknight Dinner
+                    </span>
+                    <h3 className="break-words font-display text-lg font-bold text-charcoal sm:text-xl">
+                      {findRecipesDetails?.name}
+                    </h3>
+                    <p className="text-xs text-mocha line-clamp-2 leading-relaxed">
+                      Crispy thin crust with fresh San Marzano tomato sauce, torn mozzarella, and fragrant fresh basil leaves.
+                    </p>
+                  </div>
+                </Link>
                 <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
                   <div className="flex items-center gap-1.5">
                     <svg className="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
